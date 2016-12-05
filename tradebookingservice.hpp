@@ -4,8 +4,8 @@
  *
  * @author Breman Thuraisingham
  */
-#ifndef TRADE_BOOKING_SERVICE_HPP
-#define TRADE_BOOKING_SERVICE_HPP
+#ifndef TRADEBOOKINGSERVICE_HPP
+#define TRADEBOOKINGSERVICE_HPP
 
 #include <string>
 #include <vector>
@@ -26,6 +26,8 @@ public:
 
   // ctor for a trade
   Trade(const T &_product, string _tradeId, string _book, long _quantity, Side _side);
+    // Dummy Trade ctor
+    Trade(){};
 
   // Get the product
   const T& GetProduct() const;
@@ -63,7 +65,8 @@ class TradeBookingService : public Service<string,Trade <T> >
 public:
 
   // Book the trade
-  void BookTrade(const Trade<T> &trade) = 0;
+  //void BookTrade(const Trade<T> &trade) = 0;
+    virtual void BookTrade(const Trade<T> &trade) = 0;
 
 };
 
@@ -106,5 +109,6 @@ Side Trade<T>::GetSide() const
 {
   return side;
 }
+
 
 #endif

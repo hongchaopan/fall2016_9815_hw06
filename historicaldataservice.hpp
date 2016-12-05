@@ -10,6 +10,7 @@
 #ifndef HISTORICAL_DATA_SERVICE_HPP
 #define HISTORICAL_DATA_SERVICE_HPP
 
+#include "soa.hpp"
 /**
  * Service for processing and persisting historical data to a persistent store.
  * Keyed on some persistent key.

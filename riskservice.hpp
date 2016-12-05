@@ -77,9 +77,11 @@ class RiskService : public Service<string,PV01 <T> >
 public:
 
   // Add a position that the service will risk
-  void AddPosition(Position<T> &position) = 0;
+  // void AddPosition(Position<T> &position) = 0;
+    virtual void AddPosition(Position<T> &position) = 0;
 
-  // Get the bucketed risk for the bucket sector
+
+    // Get the bucketed risk for the bucket sector
   const PV01<T>& GetBucketedRisk(const BucketedSector<T> &sector) const = 0;
 
 };

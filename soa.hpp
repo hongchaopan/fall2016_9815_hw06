@@ -13,7 +13,7 @@
 using namespace std;
 
 /**
- * Definition of a generic base class ServiceListener to listen to add, update, and remve
+ * Definition of a generic base class ServiceListener to listen to add, update, and remove
  * events on a Service. This listener should be registered on a Service for the Service
  * to notify all listeners for these events.
  */
