@@ -2,12 +2,19 @@
 ## Hongchao Pan
 ## Team 16
 
-<li>Notes: This is the final project of cpp part of MTH9815 (fall2016)</li>
+<li> Notes: This is the final project of cpp part of MTH9815 (fall2016)</li>
 
-###Files
+### Compile instructions
+<li> Please make sure install boost before compiling!</li>
+<li> Compile method: g++ -std=c++11 -I <path_to_boost> main.cpp -o main_test</li>
+<li> Then run the execute file as: ./main_test</li>
+<li> Total running time is around 75-90 seconds (mostly on generating millions data)</li>
+
+###Files 
 
 
-###Documentatin
+
+###Documentation
 
 <li> Add a function, called "AddPosition(string _id, long _quantity)" to the class Position in the given
 positionservice.hpp file</li>
@@ -54,3 +61,6 @@ the bond, orderid, price, visibleQuantity of the executable order</li>
 <li> Inquiry branch: write cusip, inquiry id, inquiry price and inquiry quantity to a file called "inquiries_record.txt"</li>
 
 <li> Move all the output file to the historicalservice.hpp</li>
+
+<li> Generate an instance of historicalservice by using singleton and created as a global varialbes in the 
+ Global_variables_functions.hpp file</li>
