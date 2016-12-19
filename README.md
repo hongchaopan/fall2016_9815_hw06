@@ -11,7 +11,23 @@
 <li> Total running time is around 75-90 seconds (mostly on generating millions data)</li>
 
 ###Files 
-
+<table>
+   <tr>
+   <td>Input files(generated)</td>
+   </tr>
+   <tr>
+   <td>trades.txt</td>
+   </tr>
+   <tr>
+   <td>prices.txt</td>
+   </tr>
+   <tr>
+   <td>marketdata.txt</td>
+   </tr>
+   <tr>
+   <td>inquiries.txt</td>
+   </tr>
+   </table>
 
 
 ###Documentation
