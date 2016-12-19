@@ -6,7 +6,7 @@
 
 ### Compile instructions
 <li> Please make sure install boost before compiling!</li>
-<li> Compile method: g++ -std=c++11 -I <path_to_boost> main.cpp -o main_test</li>
+<li> Compile method: g++ -std=c++11 -I(CAPTICAL letter "I") \<path_to_boost>\ main.cpp -o main_test</li>
 <li> Then run the execute file as: ./main_test</li>
 <li> Total running time is around 75-90 seconds (mostly on generating millions data)</li>
 
