@@ -31,7 +31,7 @@ int main() {
     // Test the workflow
 
 //    // Generate trades
-//    Generate_Trade();
+    Generate_Trade();
 //
     // Initialize global variables
     initialize_global_variables();

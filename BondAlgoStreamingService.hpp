@@ -54,11 +54,11 @@ public:
     }
 
     void AddListener(ServiceListener<Price<Bond>> *listener) override {
-        Service::AddListener(listener);
+        //Service::AddListener(listener);
     }
 
     const vector<ServiceListener<Price<Bond>> *> &GetListeners() const override {
-        return Service::GetListeners();
+        //return Service::GetListeners();
     }
 
 
