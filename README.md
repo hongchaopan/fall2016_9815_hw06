@@ -11,8 +11,9 @@
 <li> Total running time is around 75-90 seconds (mostly on generating millions data)</li>
 
 ###Files 
-<table>
 <li>Input files(generated)</li>
+
+<table>
    <tr>
    <td>trades.txt</td>
    </tr>
@@ -27,6 +28,29 @@
    </tr>
    </table>
 
+<li> Output files</li>
+<table>
+   <tr>
+   <td>From Services</td>
+   <td>From HistoricalDataService</td>
+   </tr>
+   <tr>
+   <td>booked_risk.txt</td>
+   <td>risk.txt</td>
+   </tr>
+   <tr>
+   <td>inquiries_record.txt</td>
+   <td>allinquiries.txt</td>
+   </tr>
+   <tr>
+   <td>streaming_record.txt</td>
+   <td>streaming.txt</td>
+   </tr>
+   <tr>
+   <td>executed_order.txt</td>
+   <td>execution.txt</td>
+   </tr>
+   </table>
 
 
 ###Documentation
