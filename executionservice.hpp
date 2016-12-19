@@ -76,7 +76,7 @@ class ExecutionService : public Service<string,ExecutionOrder <T> >
 
 public:
 
-  // Execute an order on a market
+    virtual // Execute an order on a market
   void ExecuteOrder(const ExecutionOrder<T>& order, Market market) = 0;
 
 };

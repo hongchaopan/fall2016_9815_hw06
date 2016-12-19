@@ -22,6 +22,7 @@ public:
 
   // ctor for a PV01 value
   PV01(const T &_product, double _pv01, long _quantity);
+    PV01(){}
 
   // Get the product on this PV01 value
   const T& GetProduct() const;
@@ -73,7 +74,6 @@ private:
 template<typename T>
 class RiskService : public Service<string,PV01 <T> >
 {
-
 public:
 
   // Add a position that the service will risk
@@ -82,7 +82,8 @@ public:
 
 
     // Get the bucketed risk for the bucket sector
-  const PV01<T>& GetBucketedRisk(const BucketedSector<T> &sector) const = 0;
+  //const PV01<T>& GetBucketedRisk(const BucketedSector<T> &sector) const = 0;
+    virtual PV01<T>& GetBucketedRisk(const BucketedSector<T> &sector)  = 0;
 
 };
 

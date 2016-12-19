@@ -27,10 +27,10 @@ public:
   virtual void ProcessAdd(V &data) = 0;
 
   // Listener callback to process a remove event to the Service
-  virtual void ProcessRemove(V &data) = 0;
+  virtual void ProcessRemove(V &data)  = 0;
 
   // Listener callback to process an update event to the Service
-  virtual void ProcessUpdate(V &data) = 0;
+  virtual void  ProcessUpdate(V &data)  = 0;
 
 };
 
@@ -41,23 +41,35 @@ public:
 template<typename K, typename V>
 class Service
 {
+protected:
+    //vector< ServiceListener<V>* > Listeners;
 
 public:
 
-  // Get data on our service given a key
-  virtual V& GetData(K key) = 0;
+//  // Get data on our service given a key
+//  virtual V& GetData(K key) = 0;
 
   // The callback that a Connector should invoke for any new or updated data
   virtual void OnMessage(V &data) = 0;
 
   // Add a listener to the Service for callbacks on add, remove, and update events
   // for data to the Service.
-  virtual void AddListener(ServiceListener<V> *listener) = 0;
+  //virtual void AddListener(ServiceListener<V> *listener) = 0;
+  virtual void AddListener(ServiceListener<V> *listener){
+      //Listeners.push_back(listener);
+  }
 
   // Get all listeners on the Service.
-  virtual const vector< ServiceListener<V>* >& GetListeners() const = 0;
+  //virtual const vector< ServiceListener<V>* >& GetListeners() const = 0;
+  virtual const vector< ServiceListener<V>* >& GetListeners()const {
+//      return Listeners;
+  }
+
 
 };  
+
+
+
 
 /**
  * Definition of a Connector class.

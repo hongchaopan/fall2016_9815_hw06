@@ -65,10 +65,10 @@ class InquiryService : public Service<string,Inquiry <T> >
 
 public:
 
-  // Send a quote back to the client
+    virtual // Send a quote back to the client
   void SendQuote(const string &inquiryId, double price) = 0;
 
-  // Reject an inquiry from the client
+    virtual // Reject an inquiry from the client
   void RejectInquiry(const string &inquiryId) = 0;
 
 };

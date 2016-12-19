@@ -10,7 +10,8 @@
 #include <string>
 #include <map>
 #include "soa.hpp"
-#include "tradebookingservice.hpp"
+//#include "tradebookingservice.hpp"
+#include "assert.h"
 
 using namespace std;
 
@@ -24,6 +25,7 @@ class Position
 
 public:
 
+    Position(){}
   // ctor for a position
   Position(const T &_product);
 
@@ -36,9 +38,17 @@ public:
   // Get the aggregate position
   long GetAggregatePosition();
 
+    // Add a function to add the postion to the positions in the Position class
+    void AddPosition(string _id, long _amount);
+
+    // Create initial positions value through book (TRSY1/2/3)
+    void init_position();
+
+
+    map<string,long> positions;
 private:
   T product;
-  map<string,long> positions;
+  //map<string,long> positions;
 
 };
 
@@ -54,7 +64,8 @@ class PositionService : public Service<string,Position <T> >
 public:
 
   // Add a trade to the service
-  virtual void AddTrade(const Trade<T> &trade) = 0;
+    // No need this function
+  //virtual void AddTrade(Trade<T> &trade) = 0;
 
 };
 
@@ -77,10 +88,39 @@ long Position<T>::GetPosition(string &book)
 }
 
 template<typename T>
-long Position<T>::GetAggregatePosition()
-{
-  // No-op implementation - should be filled out for implementations
-  return 0;
+long Position<T>::GetAggregatePosition() {
+    // implementation of GetAggregatePosition
+    long res = 0;
+    string str = "TRSY";    // For TRSY1, TRSY2, TRSY3
+    for (int i = 1; i <= 3; i++) {
+        string key = str + std::to_string(i);
+        res += positions.at(key);
+    }
+    return res;
+
 }
+
+// Add a function to add the postion to the positions in the Position class
+template <typename T>
+void Position<T>::AddPosition(string _id, long _amount) {
+    cout<<"AddPosition in Position<Bond> has been called\n";
+
+    // Add a new postion
+    assert(positions.find(_id)!=positions.end());
+    positions[_id]+=_amount;
+
+}
+
+template <typename T>
+void Position<T>::init_position() {
+    //cout<<"Initial position of Position<Bond>\n";
+    positions["TRSY1"]=long(1e6);
+    positions["TRSY2"]=long(1e6);
+    positions["TRSY3"]=long(1e6);
+
+
+}
+
+
 
 #endif

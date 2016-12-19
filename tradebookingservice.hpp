@@ -10,6 +10,7 @@
 #include <string>
 #include <vector>
 #include "soa.hpp"
+//#include "Global_variables_functions.hpp"
 
 // Trade sides
 enum Side { BUY, SELL };
@@ -66,7 +67,7 @@ public:
 
   // Book the trade
   //void BookTrade(const Trade<T> &trade) = 0;
-    virtual void BookTrade(const Trade<T> &trade) = 0;
+    virtual void BookTrade(Trade<T> &trade) = 0;
 
 };
 

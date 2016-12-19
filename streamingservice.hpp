@@ -1,4 +1,4 @@
-/**
+    /**
  * streamingservice.hpp
  * Defines the data types and Service for price streams.
  *
@@ -81,7 +81,7 @@ class StreamingService : public Service<string,PriceStream <T> >
 
 public:
 
-  // Publish two-way prices
+    virtual // Publish two-way prices
   void PublishPrice(const PriceStream<T>& priceStream) = 0;
 
 };

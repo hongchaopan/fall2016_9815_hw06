@@ -47,12 +47,15 @@ private:
 template<typename T>
 class PricingService : public Service<string,Price <T> >
 {
+public:
+    PricingService(){}
 };
 
 template<typename T>
 Price<T>::Price(const T &_product, double _mid, double _bidOfferSpread) :
   product(_product)
 {
+    //cout<<"Price<Bond> ctor\n";
   mid = _mid;
   bidOfferSpread = _bidOfferSpread;
 }

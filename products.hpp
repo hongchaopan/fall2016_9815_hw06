@@ -9,7 +9,7 @@
 
 #include <iostream>
 #include <string>
-
+//#include "Global_variables_functions.hpp"
 #include "boost/date_time/gregorian/gregorian.hpp"
 
 using namespace std;
