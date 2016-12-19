@@ -12,9 +12,7 @@
 
 ###Files 
 <table>
-   <tr>
-   <td>Input files(generated)</td>
-   </tr>
+<li>Input files(generated)</li>
    <tr>
    <td>trades.txt</td>
    </tr>
@@ -28,6 +26,7 @@
    <td>inquiries.txt</td>
    </tr>
    </table>
+
 
 
 ###Documentation
