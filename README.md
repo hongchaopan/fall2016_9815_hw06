@@ -4,6 +4,9 @@
 
 <li>Notes: This is the final project of cpp part of MTH9815 (fall2016)</li>
 
+###Files
+
+
 ###Documentatin
 
 <li> Add a function, called "AddPosition(string _id, long _quantity)" to the class Position in the given
@@ -21,8 +24,6 @@ positionservice.hpp file</li>
 the coupon of a bond</li>
 
 <li> Write a parse function by using boost::split</li>
-
-//<li> Move all enum type to the Global_variables_functions.hpp to advoid confict.</li>
 
 <li> Move listener to the corresponding hpp file to avoid include conflict.</li>
 
